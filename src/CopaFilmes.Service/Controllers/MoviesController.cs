@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CopaFilmes.Api.Domain.Commands;
-using CopaFilmes.Api.Domain.Queries;
 using CopaFilmes.Api.Infra.Repositories;
+using CopaFilmes.Service.Domain.Commands;
+using CopaFilmes.Service.Domain.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CopaFilmes.Service.Controllers

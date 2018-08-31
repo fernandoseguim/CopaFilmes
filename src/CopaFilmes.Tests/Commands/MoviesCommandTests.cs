@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using AutoFixture;
-using CopaFilmes.Api.Domain.Commands;
+using CopaFilmes.Service.Domain.Commands;
 using FluentAssertions;
 using Xunit;
 
 namespace CopaFilmes.Tests.Commands
 {
-	public class MoviesCommandTests
+	public class MoviesCommandTests : UnitTestBase
 	{
 		private readonly Fixture fixture = new Fixture();
 		
@@ -37,8 +37,8 @@ namespace CopaFilmes.Tests.Commands
 		    {
 			    movies.Add(new MovieCommand()
 			    {
-				    Id = this.fixture.Create<string>(),
-					Title = this.fixture.Create<string>(),
+				    Id = MockString(),
+					Title = MockString(),
 					Year = this.fixture.Create<int>(),
 				    Score = this.fixture.Create<int>(),
 				});

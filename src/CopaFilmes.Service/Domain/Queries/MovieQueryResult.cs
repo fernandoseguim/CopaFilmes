@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CopaFilmes.Api.Domain.Queries
+namespace CopaFilmes.Service.Domain.Queries
 {
 	public class MovieQueryResult
     {

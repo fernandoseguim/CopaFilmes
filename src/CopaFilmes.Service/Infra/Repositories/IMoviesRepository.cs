@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CopaFilmes.Api.Domain.Queries;
+using CopaFilmes.Service.Domain.Queries;
 
 namespace CopaFilmes.Api.Infra.Repositories
 {
