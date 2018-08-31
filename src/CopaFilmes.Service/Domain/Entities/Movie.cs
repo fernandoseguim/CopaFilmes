@@ -4,7 +4,7 @@ namespace CopaFilmes.Service.Domain.Entities
 {
 	public class Movie
     {
-		public Movie(string id, string title, int year, int score)
+		public Movie(string id, string title, int year, double score)
 		{
 			this.Id = id ?? throw new ArgumentNullException(nameof(id));
 			this.Title = title ?? throw new ArgumentNullException(nameof(title));
@@ -13,12 +13,12 @@ namespace CopaFilmes.Service.Domain.Entities
 			if (this.Year == default(int)) { throw new ArgumentException(nameof(this.Year)); }
 
 			this.Score = score;
-				if (this.Score == default(int)) { throw new ArgumentException(nameof(this.Score)); }
+				if (Math.Abs(this.Score - default(double)) < 0) { throw new ArgumentException(nameof(this.Score)); }
 		}
 
 		public string Id { get; }
 	    public string Title { get; }
 	    public int Year { get; }
-	    public int Score { get; }
+	    public double Score { get; }
 	}
 }
