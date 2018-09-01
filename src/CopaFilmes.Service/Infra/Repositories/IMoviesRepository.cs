@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using CopaFilmes.Service.Domain.Queries;
 
-namespace CopaFilmes.Api.Infra.Repositories
+namespace CopaFilmes.Service.Infra.Repositories
 {
 	public interface IMoviesRepository
 	{

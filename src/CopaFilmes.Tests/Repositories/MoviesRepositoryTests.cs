@@ -1,13 +1,13 @@
-using CopaFilmes.Api.Infra;
-using CopaFilmes.Api.Infra.Repositories;
-using FluentAssertions;
-using NSubstitute;
 using System;
 using System.Collections.Generic;
 using CopaFilmes.Service.Domain.Queries;
+using CopaFilmes.Service.Infra;
+using CopaFilmes.Service.Infra.Repositories;
+using FluentAssertions;
+using NSubstitute;
 using Xunit;
 
-namespace CopaFilmes.Tests
+namespace CopaFilmes.Tests.Repositories
 {
 	public class MoviesRepositoryTests
 	{

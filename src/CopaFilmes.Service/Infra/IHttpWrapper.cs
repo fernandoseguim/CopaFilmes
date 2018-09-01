@@ -1,7 +1,6 @@
-﻿using RestSharp;
-using System;
+﻿using System;
 
-namespace CopaFilmes.Api.Infra
+namespace CopaFilmes.Service.Infra
 {
 	public interface IHttpWrapper
 	{
