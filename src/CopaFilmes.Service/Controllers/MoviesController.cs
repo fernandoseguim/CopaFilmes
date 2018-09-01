@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using CopaFilmes.Api.Infra.Repositories;
 using CopaFilmes.Service.Domain.Commands;
+using CopaFilmes.Service.Domain.Handlers;
 using CopaFilmes.Service.Domain.Queries;
+using CopaFilmes.Service.Infra.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CopaFilmes.Service.Controllers
@@ -11,15 +12,20 @@ namespace CopaFilmes.Service.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
 	{
-		private readonly IMoviesRepository moviesRepository;
-	    public MoviesController(IMoviesRepository moviesRepository) 
-		    => this.moviesRepository = moviesRepository;
+		private readonly IMoviesRepository repository;
+		private readonly IMoviesHandler handler;
+
+		public MoviesController(IMoviesRepository repository, IMoviesHandler handler)
+		{
+			this.repository = repository;
+			this.handler = handler;
+		}
 
 		// GET api/movies
         [HttpGet]
         public ActionResult<IEnumerable<MovieQueryResult>> Get()
         {
-	        var movies = this.moviesRepository.GetMovies();
+	        var movies = this.repository.GetMovies();
 	        try
 	        {
 		        return Ok(movies);
@@ -31,10 +37,11 @@ namespace CopaFilmes.Service.Controllers
         }
 
 		// POST api/movies/winners
-		[HttpPost("/movies/winners")]
-        public ActionResult<IEnumerable<MovieCommand>> Post([FromBody] MovieCommand movieCommand)
+		[HttpPost("winners")]
+        public ActionResult<IEnumerable<MovieCommand>> Post([FromBody] MoviesCommand moviesCommand)
 		{
-			return Ok();
+			var result = this.handler.Handle(moviesCommand);
+			return this.StatusCode((int)result.StatusCode, result);
 		}
     }
 }

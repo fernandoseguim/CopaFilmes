@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CopaFilmes.Api.Infra;
-using CopaFilmes.Api.Infra.Repositories;
-using CopaFilmes.Service;
+﻿using CopaFilmes.Service.Domain.Engine;
+using CopaFilmes.Service.Domain.Handlers;
+using CopaFilmes.Service.Infra;
+using CopaFilmes.Service.Infra.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
-namespace CopaFilmes.Api
+namespace CopaFilmes.Service
 {
     public class Startup
     {
@@ -28,9 +22,11 @@ namespace CopaFilmes.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 	        services.AddSingleton<IHttpWrapper, HttpWrapper>();
+	        services.AddTransient<ICupEngine, CupEngine>();
 			services.AddTransient<IMoviesRepository, MoviesRepository>();
+	        services.AddTransient<IMoviesHandler, MoviesHandler>();
 
-	        services.AddResponseCompression(options =>
+			services.AddResponseCompression(options =>
 	        {
 		        options.Providers.Add<BrotliCompressionProvider>();
 		        options.EnableForHttps = true;
