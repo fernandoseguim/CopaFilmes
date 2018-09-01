@@ -20,8 +20,8 @@ namespace CopaFilmes.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-	        services.AddSingleton<IHttpWrapper, HttpWrapper>();
+	        services.AddSingleton(this.Configuration.GetSection("MoviesApiContext").Get<MoviesApiContext>());
+			services.AddSingleton<IHttpWrapper, HttpWrapper>();
 	        services.AddTransient<ICupEngine, CupEngine>();
 			services.AddTransient<IMoviesRepository, MoviesRepository>();
 	        services.AddTransient<IMoviesHandler, MoviesHandler>();
