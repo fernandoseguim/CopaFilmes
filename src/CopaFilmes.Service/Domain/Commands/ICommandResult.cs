@@ -1,7 +1,11 @@
-﻿namespace CopaFilmes.Api.Domain.Commands
+﻿using System.Net;
+
+namespace CopaFilmes.Service.Domain.Commands
 {
 	public interface ICommandResult
-    {
-	    object Data { get; }
-    }
+	{
+		HttpStatusCode StatusCode { get; }
+		bool Success { get; }
+		object Data { get; }
+	}
 }

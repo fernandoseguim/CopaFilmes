@@ -1,14 +1,14 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 
-namespace CopaFilmes.Api.Domain.Commands
+namespace CopaFilmes.Service.Domain.Commands
 {
 	public class MovieCommand : Notifiable
-    {
+	{
 	    public string Id  { get; set; }
 	    public string Title { get; set; }
 	    public int Year { get; set; }
-	    public int Score { get; set; }
+	    public double Score { get; set; }
 
 	    public void Validate()
 	    {

@@ -1,15 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using Flunt.Validations;
+using System.Collections.Generic;
 using System.Linq;
 using Flunt.Notifications;
-using Flunt.Validations;
 
-namespace CopaFilmes.Api.Domain.Commands
+namespace CopaFilmes.Service.Domain.Commands
 {
 	public class MoviesCommand : Notifiable
 	{
 		public const int REQUIRED_QUANTITY_MOVIES = 8;
 
-	    public IEnumerable<MovieCommand> Movies { get; set; }
+		public MoviesCommand()
+		{
+			this.Movies = new List<MovieCommand>();
+		}
+
+	    public IList<MovieCommand> Movies { get; set; }
 
 	    public void Validate()
 		{
