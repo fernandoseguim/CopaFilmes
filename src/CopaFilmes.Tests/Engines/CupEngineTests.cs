@@ -1,5 +1,4 @@
 ﻿using AutoFixture;
-using CopaFilmes.Service.Domain.Commands;
 using CopaFilmes.Service.Domain.Engine;
 using CopaFilmes.Service.Domain.Entities;
 using FluentAssertions;
