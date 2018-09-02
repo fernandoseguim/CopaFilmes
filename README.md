@@ -49,79 +49,8 @@ http://localhost:5000/api/movies
         "title": "Hereditário",
         "year": 2018,
         "score": 8
-    },
-    {
-        "id": "tt4154756",
-        "title": "Vingadores: Guerra Infinita",
-        "year": 2018,
-        "score": 9
-    },
-    {
-        "id": "tt5463162",
-        "title": "Deadpool 2",
-        "year": 2018,
-        "score": 8
-    },
-    {
-        "id": "tt3778644",
-        "title": "Han Solo: Uma História Star Wars",
-        "year": 2018,
-        "score": 7
-    },
-    {
-        "id": "tt3501632",
-        "title": "Thor: Ragnarok",
-        "year": 2017,
-        "score": 8
-    },
-    {
-        "id": "tt2854926",
-        "title": "Te Peguei!",
-        "year": 2018,
-        "score": 7
-    },
-    {
-        "id": "tt0317705",
-        "title": "Os Incríveis",
-        "year": 2004,
-        "score": 8
-    },
-    {
-        "id": "tt3799232",
-        "title": "A Barraca do Beijo",
-        "year": 2018,
-        "score": 6
-    },
-    {
-        "id": "tt1365519",
-        "title": "Tomb Raider: A Origem",
-        "year": 2018,
-        "score": 6
-    },
-    {
-        "id": "tt1825683",
-        "title": "Pantera Negra",
-        "year": 2018,
-        "score": 8
-    },
-    {
-        "id": "tt5834262",
-        "title": "Hotel Artemis",
-        "year": 2018,
-        "score": 6
-    },
-    {
-        "id": "tt7690670",
-        "title": "Superfly",
-        "year": 2018,
-        "score": 5
-    },
-    {
-        "id": "tt6499752",
-        "title": "Upgrade",
-        "year": 2018,
-        "score": 8
     }
+    ...
 ]
 ```
 
@@ -129,10 +58,13 @@ http://localhost:5000/api/movies
 
 http://localhost:5000/api/movies/winners
 
+NOTE: To get the winners movies is necessary to send a request with a movies list with 8 items exactly in the request body 
+
 #### Body
 
 ```json
-{ "Movies" : [
+{ 
+	"Movies" : [
 	    {
 	        "id": "tt3606756",
 	        "title": "Os Incríveis 2",
