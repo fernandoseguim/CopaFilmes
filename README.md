@@ -18,7 +18,7 @@ dotnet run
 
 ## Endpoints
 
-[Get] Get All Movies
+### [Get] Get All Movies
 
 http://localhost:5000/api/movies
 
@@ -54,7 +54,7 @@ http://localhost:5000/api/movies
 ]
 ```
 
-[POST] Get Winners 
+### [POST] Get Winners 
 
 http://localhost:5000/api/movies/winners
 
