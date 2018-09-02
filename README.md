@@ -64,56 +64,56 @@ NOTE: To get the winners movies is necessary to send a request with a movies lis
 
 ```json
 { 
-	"Movies" : [
-	    {
-	        "id": "tt3606756",
-	        "title": "Os Incríveis 2",
-	        "year": 2018,
-	        "score": 8
-	    },
-	    {
-	        "id": "tt4881806",
-	        "title": "Jurassic World: Reino Ameaçado",
-	        "year": 2018,
-	        "score": 7
-	    },
-	    {
-	        "id": "tt5164214",
-	        "title": "Oito Mulheres e um Segredo",
-	        "year": 2018,
-	        "score": 6
-	    },
-	    {
-	        "id": "tt7784604",
-	        "title": "Hereditário",
-	        "year": 2018,
-	        "score": 8
-	    },
-	    {
-	        "id": "tt4154756",
-	        "title": "Vingadores: Guerra Infinita",
-	        "year": 2018,
-	        "score": 9
-	    },
-	    {
-	        "id": "tt5463162",
-	        "title": "Deadpool 2",
-	        "year": 2018,
-	        "score": 8
-	    },
-	    {
-	        "id": "tt3778644",
-	        "title": "Han Solo: Uma História Star Wars",
-	        "year": 2018,
-	        "score": 7
-	    },
-	    {
-	        "id": "tt3501632",
-	        "title": "Thor: Ragnarok",
-	        "year": 2017,
-	        "score": 8
-	    }
-	]
+  "Movies" : [
+      {
+          "id": "tt3606756",
+          "title": "Os Incríveis 2",
+          "year": 2018,
+          "score": 8
+      },
+      {
+          "id": "tt4881806",
+          "title": "Jurassic World: Reino Ameaçado",
+          "year": 2018,
+          "score": 7
+      },
+      {
+          "id": "tt5164214",
+          "title": "Oito Mulheres e um Segredo",
+          "year": 2018,
+          "score": 6
+      },
+      {
+          "id": "tt7784604",
+          "title": "Hereditário",
+          "year": 2018,
+          "score": 8
+      },
+      {
+          "id": "tt4154756",
+          "title": "Vingadores: Guerra Infinita",
+          "year": 2018,
+          "score": 9
+      },
+      {
+          "id": "tt5463162",
+          "title": "Deadpool 2",
+          "year": 2018,
+          "score": 8
+      },
+      {
+          "id": "tt3778644",
+          "title": "Han Solo: Uma História Star Wars",
+          "year": 2018,
+          "score": 7
+      },
+      {
+          "id": "tt3501632",
+          "title": "Thor: Ragnarok",
+          "year": 2017,
+          "score": 8
+      }
+  ]
 }
 ```
 
